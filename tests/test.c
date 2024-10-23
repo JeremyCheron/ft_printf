@@ -6,7 +6,7 @@
 /*   By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 15:08:38 by jcheron           #+#    #+#             */
-/*   Updated: 2024/10/21 12:03:47 by jcheron          ###   ########.fr       */
+/*   Updated: 2024/10/23 13:42:31 by jcheron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include "ft_printf.h"
 #include "libft.h"
 
-int	main(void)
+void	run_test(void)
 {
-	char *ptr = "coucou";
+	int *ptr = 0 ;
 
 	ft_printf("My Char test   : %c !\n", 'W');
 	printf("Printf Char    : %c !\n", 'W');
@@ -53,10 +53,14 @@ int	main(void)
 
 	printf("------------------------------------------\n");
 
-	ft_printf("My unsigned test : %u\n", -1);
-	printf("Printf unsigned  : %u\n", -1);
+	ft_printf("My unsigned test : %u\n", 10);
+	printf("Printf unsigned  : %u\n", 10);
 
 	printf("------------------------------------------\n");
+}
 
+int main(void)
+{
+	run_test();
 	return (0);
 }

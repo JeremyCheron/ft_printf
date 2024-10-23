@@ -6,7 +6,7 @@
 #    By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/18 16:57:15 by jcheron           #+#    #+#              #
-#    Updated: 2024/10/21 10:35:12 by jcheron          ###   ########.fr        #
+#    Updated: 2024/10/23 13:05:54 by jcheron          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,7 @@ $(NAME):	$(OBJ) $(OBJ_PRINTERS)
 			@make -C $(LIBFT)
 			@cp libft/libft.a .
 			@mv libft.a $(NAME)
-			@$(AR) $(NAME) $(OBJ)
+			@$(AR) $(NAME) $(OBJ) $(OBJ_PRINTERS)
 			@echo -e "$(GREEN)ft_printf compiled!$(DEF_COLOR)"
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)

@@ -6,7 +6,7 @@
 /*   By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:45:35 by jcheron           #+#    #+#             */
-/*   Updated: 2024/10/21 10:34:47 by jcheron          ###   ########.fr       */
+/*   Updated: 2024/10/22 18:09:09 by jcheron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 
 int	ft_putchar(int c)
 {
-	write(1, &c, 1);
-	return (1);
+	return (write(1, &c, 1));
 }
 
 static int	ft_formats(va_list args, const char format)
@@ -28,17 +27,17 @@ static int	ft_formats(va_list args, const char format)
 	len = 0;
 	if (format == 'c')
 		len += ft_print_c(va_arg(args, int));
-	if (format == 's')
+	else if (format == 's')
 		len += ft_print_s(va_arg(args, char *));
-	if (format == 'd' || format == 'i')
+	else if (format == 'd' || format == 'i')
 		len += ft_print_d(va_arg(args, int));
-	if (format == '%')
+	else if (format == '%')
 		len += ft_print_pct();
-	if (format == 'x' || format == 'X')
-		len += ft_print_x(va_arg(args, int), format);
-	if (format == 'p')
+	else if (format == 'x' || format == 'X')
+		len += ft_print_x(va_arg(args, unsigned int), format);
+	else if (format == 'p')
 		len += ft_print_p(va_arg(args, uintptr_t));
-	if (format == 'u')
+	else if (format == 'u')
 		len += ft_print_u(va_arg(args, unsigned int));
 	return (len);
 }

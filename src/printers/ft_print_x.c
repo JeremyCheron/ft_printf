@@ -6,13 +6,13 @@
 /*   By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 15:08:45 by jcheron           #+#    #+#             */
-/*   Updated: 2024/10/19 15:24:25 by jcheron          ###   ########.fr       */
+/*   Updated: 2024/10/23 13:09:24 by jcheron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_put_hex(int n, char *chars)
+static int	ft_put_hex(unsigned int n, char *chars)
 {
 	int	count;
 

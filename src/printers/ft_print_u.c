@@ -6,7 +6,7 @@
 /*   By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 10:23:02 by jcheron           #+#    #+#             */
-/*   Updated: 2024/10/21 10:28:38 by jcheron          ###   ########.fr       */
+/*   Updated: 2024/10/23 13:16:33 by jcheron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_put_u(unsigned int n)
 	int	count;
 
 	count = 0;
-	if (n > 10)
+	if (n >= 10)
 	{
 		count += ft_put_u(n / 10);
 		count += ft_put_u(n % 10);
