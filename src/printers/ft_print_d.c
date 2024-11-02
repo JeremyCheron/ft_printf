@@ -6,7 +6,7 @@
 /*   By: jcheron <jcheron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 15:12:52 by jcheron           #+#    #+#             */
-/*   Updated: 2024/10/19 15:37:06 by jcheron          ###   ########.fr       */
+/*   Updated: 2024/10/27 19:00:02 by jcheron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,9 @@
 
 static int	ft_putnbr(unsigned int n)
 {
-	int	count;
-
-	count = 0;
 	if (n >= 10)
-	{
-		count += ft_putnbr(n / 10);
-		count += ft_putnbr(n % 10);
-	}
-	else
-		count += ft_print_c(n + 48);
-	return (count);
+		return (ft_putnbr(n / 10) + ft_putnbr(n / 10))
+	return (ft_print_c(n));
 }
 
 int	ft_print_d(int n)
